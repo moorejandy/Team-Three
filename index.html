@@ -15,10 +15,26 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">RASA: Regal Art Search App</h1>
+                  <p class="lead">An app that provides information on art in real time! </p>
+                </div>
+              </div>
+        <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Search for an image you're interested in</div>
+                <div class="card-body">
+                  <h5 class="card-title">RASA will provide the image from an api provided by harvard museums.</h5>
+                  <p class="card-text"> In addition to the image RASA will provide information related to the searched image.</p>
+                </div>
+  
+=======
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
 
                 <!-- Navbar brand -->
+
                 <a class="navbar-brand" href="#">Navbar</a>
         
                 <!-- Collapsible content -->
@@ -30,8 +46,12 @@
                         </div>
                         <button href="#!" id="submitbutton" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search</button>
                     </form>
+
+         
+          
          
                 </div>
+
                 <!-- Collapsible content -->
         
             </nav>
@@ -39,7 +59,9 @@
 
     <div id="gif-view"></div>
 
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <div id="books-view"></div>
+
+    <script type="text/javascript" src="assets/javascript/Harvard-api.js"></script>
+    <script type="text/javascript" src="assets/javascript/DL-api.js"></script>
 </body>
 </html>
-
