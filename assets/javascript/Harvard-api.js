@@ -1,13 +1,13 @@
 // displayNatureInfo function re-renders the HTML to display the appropriate content
 // function displayNatureInfo() {  
-
-
+// hey heyy..
+// wwww
 //   Creates AJAX call for the specific button being clicked
 $("#submitbutton").on("click", function(event) {
 
   event.preventDefault();
 
-  $("#gif-view").empty();
+  $("#harvard-view").empty();
 
   var topic = $("#userinput").val();
   console.log(topic);
@@ -25,36 +25,41 @@ $("#submitbutton").on("click", function(event) {
       // storing the data from the AJAX request in the results variable
   
       var results = response.records;
-      console.log(results);
+      // console.log(results);
           // Looping through each result item
           for (var i = 0; i < results.length; i++) {
               
-            console.log(results.length);
+            // console.log(results.length);
 
             // Creating and storing a div tag
-            var natureDiv = $("<div>");
+            var harvardDiv = $("<div>");
 
             // Creating a paragraph tag with the result item's rating
-            // var p = $("<p>").text("Artist: " + results[i].people[0].displayname);
+            var p = $("<p>").text("Artist: " + results[i].people[0].displayname);
 
-            console.log("Results.lenght:" + results.length);
+            // console.log("Results.lenght:" + results.length);
 
-            console.log("-----------");
+            // console.log("-----------");
 
-            console.log("Results[i]" + results[i]);
+            // console.log("Results[i]" + results[i]);
 
-            console.log("-----------");
+            // console.log("-----------");
 
             // console.log(results.length);
             try {
             // Creating and storing an image tag
-            var natureImage = $("<img>");
+            var harvardImage = $("<img>");
             // Setting the src attribute of the image to a property pulled off the result item
-            natureImage.attr("src", results[i].images[0].baseimageurl);
+            harvardImage.attr("src", results[i].images[0].baseimageurl);
             // natureImage.attr("data-animate", results[i].images.fixed_height.url);
             // natureImage.attr("data-still", results[i].images.fixed_height_still.url);
             // natureImage.attr("data-state", "still");
-            natureImage.addClass("nature-image");
+            harvardImage.addClass("harvard-image");
+
+            // console.log(natureImage);
+            // Appending the paragraph and image tag to the animalDiv
+            harvardDiv.append(p);
+            harvardDiv.append(harvardImage);
 
             }
 
@@ -62,13 +67,8 @@ $("#submitbutton").on("click", function(event) {
 
             }
 
-            console.log(natureImage);
-            // Appending the paragraph and image tag to the animalDiv
-            // natureDiv.append(p);
-            natureDiv.append(natureImage);
-
             // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-            $("#gif-view").prepend(natureDiv);
+            $("#harvard-view").prepend(harvardDiv);
           
           };
     });
@@ -82,7 +82,7 @@ $("#submitbutton").on("click", function(event) {
   
       //empty value from text box after button is created
   
-      $("#userinput").val("");
+      // $("#userinput").val("");
         // Calling renderButtons which handles the processing of topics array
         // renderButtons();
   

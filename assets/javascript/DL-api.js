@@ -1,13 +1,14 @@
 // displayNatureInfo function re-renders the HTML to display the appropriate content
 // function displayNatureInfo() {  
-
-
+//hey hey..
+//heheyeeh
+// wwww
 //   Creates AJAX call for the specific button being clicked
 $("#submitbutton").on("click", function(event) {
 
   event.preventDefault();
 
-  $("#books-view").empty();
+  $("#DL-view").empty();
 
   var topic = $("#userinput").val();
   console.log(topic);
@@ -33,37 +34,36 @@ $("#submitbutton").on("click", function(event) {
 
             // if ((results[i].sourceResource.format) == "Electronic resource,Language material") {
 
-            console.log(results.length);
+            // console.log(results.length);
 
             // Creating and storing a div tag
             var bookDiv = $("<div>");
 
             // Creating a paragraph tag with the result item's rating
 
-            var p = $("<p>").text("Format: " + results[i].sourceResource.format);
+            // var p = $("<p>").text("Format: " + results[i].sourceResource.format);
             var p2 = $("<p>").text("Title: " + results[i].sourceResource.title);
-            var address = $("<p>").text("HaSvIEW: " + results[i].hasView);
+            // var address = $("<p>").text("HaSvIEW: " + results[i]["@id"]);
+            var address = $("<p>").text("Link: " + results[i].isShownAt);
 
-            console.log(results[i].hasView)
             // var p = $("<p>").text("Title: " + results[i].isShownAt.title[0]);
 
-            console.log("Results.lenght: NEW API" + results.length);
-
-            console.log("-----------");
-
-            console.log("Results[i] NEW API" + results[i]);
-
-            console.log("-----------");
 
             try {
             // Creating and storing an image tag
             var bookImage = $("<img>");
             // // Setting the src attribute of the image to a property pulled off the result item
             bookImage.attr("src", results[i].object);
-            bookImage.attr("alt-text", "this is an image");
+            
             // natureImage.attr("data-still", results[i].images.fixed_height_still.url);
             // natureImage.attr("data-state", "still");
-            // natureImage.addClass("nature-image");
+            bookImage.addClass("dl-image");
+            bookImage.attr("alt-text", "this is an image");
+
+            bookDiv.append(p2);
+            bookDiv.append(bookImage);
+            
+            bookDiv.append(address);
         }
 
         catch(err) {
@@ -71,20 +71,27 @@ $("#submitbutton").on("click", function(event) {
         }
 
             // Appending the paragraph and image tag to the animalDiv
-            bookDiv.append(p);
-            bookDiv.append(bookImage);
-            bookDiv.append(p2);
-            bookDiv.append(address);
+            // bookDiv.append(p);
+            
             
 
         
             // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-            $("#books-view").prepend(bookDiv);
+            $("#DL-view").prepend(bookDiv);
 
             // i++;
+
+
         // };
             };
           
+            // console.log("Results.lenght: NEW API" + results.length);
+
+            // console.log("-----------");
+
+            // console.log("Results[i] NEW API" + results[i]);
+
+            // console.log("-----------");
     });
 
     
