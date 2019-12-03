@@ -2,6 +2,7 @@
 // function displayNatureInfo() {  
 //hey hey..
 //heheyeeh
+///h
 // wwww
 //   Creates AJAX call for the specific button being clicked
 $("#submitbutton").on("click", function(event) {
@@ -44,11 +45,16 @@ $("#submitbutton").on("click", function(event) {
             // var p = $("<p>").text("Format: " + results[i].sourceResource.format);
             var p2 = $("<p>").text("Title: " + results[i].sourceResource.title);
             // var address = $("<p>").text("HaSvIEW: " + results[i]["@id"]);
-            var address = $("<p>").text("Link: " + results[i].isShownAt);
+            
+            var address = $("<a>");
+            var par = $("<p>");
 
+            address.attr("href", results[i].isShownAt);
+
+            address.text("Click here for more info");
             // var p = $("<p>").text("Title: " + results[i].isShownAt.title[0]);
 
-
+/* <a href= link>dhehkshdnemdnsmne</a> */
             try {
             // Creating and storing an image tag
             var bookImage = $("<img>");
@@ -62,8 +68,10 @@ $("#submitbutton").on("click", function(event) {
 
             bookDiv.append(p2);
             bookDiv.append(bookImage);
+            par.append(address);
+            bookDiv.append(par);
             
-            bookDiv.append(address);
+            
         }
 
         catch(err) {

@@ -1,13 +1,12 @@
-
-
+    
 .harvard-image {
     width: 300px;
     height: 300px;
 }
 
 .dl-image {
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
 }
 
 .jumbotron {
@@ -33,14 +32,12 @@ body{
     width: 45%;
     height: 100%;
     margin: 10px;
-    background-color: aqua;
 }
 
 #DL-view {
     width: 45%;
     height: 100%;
     margin: 10px;
-    background-color:sienna;
     /* float: right; */
 }
 
@@ -54,6 +51,22 @@ body{
     
 }
 
+@media only screen and (max-width: 650px) {
+    .harvard-image {
+        width: 200px;
+        height: 200px;
+    }
+  }
+
+  .navbar {
+            position: relative;
+            z-index: 2;
+            background-color:lightslategray;
+  }
+
+  body {
+      background-image: url(../images/parchment-background-3411.png);
+  }
 /* .cardborder{
     position:
 
