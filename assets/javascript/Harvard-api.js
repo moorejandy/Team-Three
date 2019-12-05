@@ -9,7 +9,7 @@ $("#submitbutton").on("click", function(event) {
   $("#harvard-view").empty();
 // A variable called queryURL will search for the topic the user inputs from the API
   var topic = $("#userinput").val();
-  var queryURL = "https://api.harvardartmuseums.org/object?&title=" + topic + "&classification=Paintings&apikey=c2e6e320-0e08-11ea-8848-2bf2bad4b97b";
+  var queryURL = "https://api.harvardartmuseums.org/object?&keyword=" + topic + "&classification=Paintings&apikey=c2e6e320-0e08-11ea-8848-2bf2bad4b97b";
   // Using an AJAX to find information from the API by using the GET method.
   $.ajax({
     url: queryURL,
