@@ -22,3 +22,6 @@ Built With
 Future Features:
 - Display more information about paintings, eg: time era
 - Plan a trip feature which displays map and exhibit info
+
+
+https://moorejandy.github.io/Team-Three/
