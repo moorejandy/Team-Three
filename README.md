@@ -1,5 +1,7 @@
 # Team-Three- RAS ( Regal Search App)
 
+## [Link to Project](https://moorejandy.github.io/Team-Three/)
+
 Objective:
 Users search for an artist, title or topic of a painting they're interested in.
 RAS will populate painting results and additional online book resources. User can dive deeper into their research by clicking the provided links. 
